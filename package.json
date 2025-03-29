@@ -2,28 +2,33 @@
   "name": "2nist-suite",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "npm@10.2.4",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
-    "test": "npm run test:10sion",
-    "test:10sion": "cd apps/10sion && npm test",
-    "test:2nist": "cd apps/2nist && npm test",
-    "test:all": "npm test:10sion && npm test:2nist",
-    "dev": "npm run dev:10sion & npm run dev:2nist",
-    "dev:10sion": "cd apps/10sion && npm run dev",
-    "dev:2nist": "cd apps/2nist && npm run dev",
-    "build": "npm run build:10sion && npm run build:2nist",
-    "build:10sion": "cd apps/10sion && npm run build",
-    "build:2nist": "cd apps/2nist && npm run build"
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "test:10sion": "turbo run test --filter=10sion",
+    "test:2nist": "turbo run test --filter=2nist",
+    "dev:10sion": "turbo run dev --filter=10sion",
+    "dev:2nist": "turbo run dev --filter=2nist",
+    "dev:4mist": "turbo run dev --filter=4mist"
   },
   "devDependencies": {
-    "@vitejs/plugin-react-swc": "^3.8.1",
     "turbo": "latest"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "vite": "^4.3.9"
-  }
+  }"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+}
+
 }

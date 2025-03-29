@@ -1,0 +1,9 @@
+{
+  "name": "@2nist/utils",
+  "version": "1.0.0",
+  "private": true,
+  "main": "utils/chordUtils.js",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

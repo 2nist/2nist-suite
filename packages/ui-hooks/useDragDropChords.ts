@@ -10,6 +10,7 @@ interface UseDragDropChordsReturn {
   chords: DragDropChord[];
   onDragStart: (id: string) => void;
   onDrop: (id: string, newPosition: number) => void;
+  setChords: React.Dispatch<React.SetStateAction<DragDropChord[]>>;
 }
 
 export function useDragDropChords(initialChords: DragDropChord[]): UseDragDropChordsReturn {
@@ -29,5 +30,5 @@ export function useDragDropChords(initialChords: DragDropChord[]): UseDragDropCh
     });
   };
 
-  return { chords, onDragStart, onDrop };
+  return { chords, onDragStart, onDrop, setChords };
 }
