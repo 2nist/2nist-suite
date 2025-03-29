@@ -1,7 +1,15 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@2nist/ui-hooks": ["packages/ui-hooks"],
+      "@2nist/ui": ["packages/ui"],
+      "@2nist/utils": ["packages/utils"]
+    },
+    "esModuleInterop": true,
+    "jsx": "react",
+    "lib": ["dom", "es2015"],
+    // ...existing options...
+  },
+  // ...existing configuration...
 }
