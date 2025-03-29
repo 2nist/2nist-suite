@@ -7,5 +7,21 @@
 	"settings": {
 		"editor.cursorStyle": "block-outline",
 		"workbench.activityBar.iconClickBehavior": "focus"
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "verify",
+				"type": "shell",
+				"command": "group"
+			},
+			{
+				"label": "test",
+				"type": "shell",
+				"command": "npm test",
+				"group": "test"
+			}
+		]
 	}
 }

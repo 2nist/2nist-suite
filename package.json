@@ -1,0 +1,27 @@
+{
+  "name": "2nist-suite",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "npm run test:10sion",
+    "test:10sion": "cd apps/10sion && npm test",
+    "test:2nist": "cd apps/2nist && npm test",
+    "test:all": "npm test:10sion && npm test:2nist",
+    "dev:10sion": "cd apps/10sion && npm run dev",
+    "dev:2nist": "cd apps/2nist && npm run dev",
+    "build": "npm run build:10sion && npm run build:2nist",
+    "build:10sion": "cd apps/10sion && npm run build",
+    "build:2nist": "cd apps/2nist && npm run build"
+  },
+  "devDependencies": {
+    "turbo": "latest"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.2.3"
+  }
+}
