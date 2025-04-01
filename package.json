@@ -19,16 +19,15 @@
     "dev:4mist": "turbo run dev --filter=4mist"
   },
   "devDependencies": {
-    "turbo": "latest"
+    "@types/react": "^19.0.12",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.17",
+    "turbo": "latest",
+    "vitest": "^3.1.1"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "vite": "^4.3.9"
-  }"scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject"
-}
-
+  }
 }

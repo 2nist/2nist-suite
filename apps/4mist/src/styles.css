@@ -1,0 +1,81 @@
+/* Custom styles for 4mist components */
+
+/* Basic app layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  color: #f4e7d4;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #2d2d2d;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav a {
+  color: #f4e7d4;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav a:hover {
+  background-color: #3a3a3a;
+  color: #2fb7b3;
+}
+
+/* Main content area */
+main {
+  flex: 1;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Component containers */
+.sparkboard,
+.construction-zone,
+.wordbank {
+  margin: 1.25rem 0;
+  padding: 1rem;
+  background-color: #2d2d2d;
+  border: 2px solid;
+  border-radius: 0.5rem;
+}
+
+.sparkboard {
+  border-color: #2fb7b3;
+}
+
+.construction-zone {
+  border-color: #e89f4f;
+}
+
+.wordbank {
+  border-color: #3cbb87;
+}
+
+/* RadialHexMenu styles */
+.radial-hex-menu polygon {
+  transition: all 0.2s ease;
+}
+
+.radial-hex-menu polygon:hover {
+  fill: #2fb7b3;
+  stroke: white;
+}
+
+.center polygon {
+  fill: #2d2d2d;
+  stroke: #e89f4f;
+  stroke-width: 2px;
+}

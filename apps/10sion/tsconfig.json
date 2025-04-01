@@ -4,7 +4,12 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "forceConsistentCasingInFileNames": true,
-    "strict": true
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "@2nist/ui/*": ["../../packages/ui/*"],
+      "@2nist/ui-hooks/*": ["../../packages/ui-hooks/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules"]

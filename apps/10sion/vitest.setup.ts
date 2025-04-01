@@ -1,1 +1,6 @@
-import '@testing-library/jest-dom/extend-expect';
+import { vi } from 'vitest';
+
+// Mock global setup for vitest
+vi.mock('@2nist/ui-hooks', () => ({
+  useDragDropChords: vi.fn(),
+}));

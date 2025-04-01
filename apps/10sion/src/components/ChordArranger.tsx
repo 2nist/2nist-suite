@@ -3,6 +3,11 @@ import { useDragDropChords } from '@2nist/ui-hooks';
 import { ModifierPanel } from '@2nist/ui/components/ModifierPanel';
 import { ProgressionSelector } from '@2nist/ui/components/ProgressionSelector';
 
+interface Modifier {
+  id: string;
+  name: string;
+}
+
 export const ChordArranger: React.FC = () => {
   const [selectedKey, setSelectedKey] = useState('C');
   const [selectedChordId, setSelectedChordId] = useState<string | null>(null);
@@ -92,7 +97,7 @@ export const ChordArranger: React.FC = () => {
       {selectedChordId && (
         <ModifierPanel
           selectedChord={chords.find(c => c.id === selectedChordId)}
-          onModifierSelect={(modifier) => {
+          onModifierSelect={(modifier: Modifier) => {
             setChords(chords.map(c => 
               c.id === selectedChordId
                 ? { ...c, name: `${c.name}${modifier}` }
