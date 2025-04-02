@@ -22,6 +22,7 @@ export const Sparkboard: React.FC<SparkboardProps> = ({ prompts, onPromptChange 
           <label className="block text-sm mb-1">{prompt}</label>
           <input
             className="w-full p-2 rounded bg-[#333] text-white"
+            placeholder={`Enter your response for "${prompt}"`}
             value={responses[prompt] || ''}
             onChange={(e) => handleChange(prompt, e.target.value)}
           />
